@@ -1,3 +1,2 @@
-# HTML-CSS-COMPONENTS
-My repository with some HTML-CSS pages developed for training and reuse.
-aaa
+# Login Page Example
+## A login page without login functionality, only with the example CSS.
