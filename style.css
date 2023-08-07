@@ -65,12 +65,11 @@ input:-webkit-autofill:active {
   background-color: #59ee68;
   border-radius: 30px;
   border: 0;
-  color: #fff;
+  color: #000;
   font-family: "IBOM Plex Mono", monospace;
   font-size: calc(16px + 0.5vw);
   height: 10%;
   outline: 0;
-  padding: 1%;
   text-align: center;
   text-transform: uppercase;
   width: 60%;
@@ -100,6 +99,16 @@ input:-webkit-autofill:active {
 
   .login-container span {
     width: 100%;
+  }
+}
+
+@media (max-height: 530px) {
+  .main-container {
+    padding-top: 0;
+  }
+  .login-container {
+    box-shadow: none;
+    height: 100vh;
   }
 }
 
