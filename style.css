@@ -1,0 +1,127 @@
+/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"); */
+
+:root {
+  --bg-color-action: #282931;
+  --bg-color-primary: #111214;
+  --font-family-primary: "IBM Plex Mono", monospace;
+  --txt-color-action: #eee9e9;
+  --txt-color-logout: #fc7d7d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  background-color: var(--bg-color-primary);
+  height: 90vh;
+  width: 100vw;
+}
+
+.menu-bar {
+  background-color: var(--bg-color-action);
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 2vh 2vw 2vh 2vw;
+  width: 100%;
+}
+
+.menu-bar li {
+  display: flex;
+  align-items: center;
+}
+
+.logo-label {
+  font-size: calc(16px + 1vw);
+  text-align: center;
+  font-family: var(--font-family-primary);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+  color: var(--txt-color-action);
+}
+
+.user-icon {
+  filter: invert(1);
+  height: 3rem;
+  width: 3rem;
+}
+
+.invisible {
+  display: none;
+}
+
+.user-logout {
+  color: var(--txt-color-logout);
+  font-family: var(--font-family-primary);
+  font-size: calc(16px + 1vw);
+  letter-spacing: 0.3rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.user-options {
+  background-color: var(--bg-color-action);
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  justify-content: center;
+  padding: 10px;
+  position: absolute;
+  transform: translate(calc(0% - 55%), calc(100% + 2vh));
+  z-index: 1;
+}
+
+.user-container {
+  align-items: center;
+  display: flex;
+}
+
+.centered-grid {
+  align-items: center;
+  background-color: var(--bg-color-primary);
+  display: flex;
+  justify-content: center;
+  max-height: 40vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 100%;
+}
+
+.grid-item {
+  align-items: center;
+  background-color: var(--bg-color-primary);
+  border-radius: 10px;
+  border: 1px solid;
+  color: var(--txt-color-action);
+  display: flex;
+  font-family: var(--font-family-primary);
+  font-size: 24px;
+  justify-content: center;
+  padding: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item:hover {
+  background-color: var(--txt-color-action);
+  color: var(--bg-color-action);
+}
+
+@media (max-width: 790px) {
+  .user-icon {
+    display: none;
+  }
+  .user-logout {
+    display: block;
+  }
+}

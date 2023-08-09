@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="A main Page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="style.css" media="all" />
+  </head>
+  <body>
+    <header>
+      <menu class="menu-bar">
+        <li>
+          <a class="logo-label" href="#">label</a>
+        </li>
+        <li>
+          <span class="user-container" >
+            <img
+              id="user-button-options"
+              class="user-icon"
+              src="./Assets/user.png"
+              alt="User Image"
+              width="50px"
+              height="50px"
+            />
+            <a class="user-logout invisible" href="#">logout</a>
+          </span>
+          <span id="user-list-options" class="user-options">
+            <a class="user-logout" href="#">logout</a>
+            <!-- Link to logout -->
+          </span>
+        </li>
+      </menu>
+    </header>
+    <section class="centered-grid">
+      <div class="grid-container">
+          <a href="#" class="grid-item">Link 1</a>
+          <a href="#" class="grid-item">Link 2</a>
+          <a href="#" class="grid-item">Link 3</a>
+          <a href="#" class="grid-item">Link 4</a>
+      </div>
+  </section>
+  </body>
+  <script>
+    const userButtonOptions = document.getElementById("user-button-options");
+    const userListOptions = document.getElementById("user-list-options");
+    document.addEventListener("click", ( event ) => {
+      userListOptions.style.display = userButtonOptions.contains(event.target)
+        ? "flex"
+        : "none";
+    });
+  </script>
+</html>
